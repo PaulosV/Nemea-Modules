@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# input data:
+in='
+H4sIANzTd1gAA2NiAIPYzILElJQiBZfgkHjPAB0oLzjIGcQrycxNVQjx9HWNd/MMCg5B4vs4Arml
+mXklxkYKrmGufiHxwc6OPq5gIUMzsGkB/kEhQAtWM5gxQIGokozQfyCA8XlZVBhhfA2BsggQLStY
+FsEOpFl5EfpauM10kfUpmEjMh/F38kP0PQfql0fTh26fSJe5GYzfDLVPDmgfK0QfIwMAACTyOhQB
+AAA=
+'
+
+# output data:
+out='
+H4sIAI+kWVwAA92U32vbMBDH3/dXCD9XQqcfruK3LWkhDwuBBAYbfZBlOTFLrGArLSX0f58lj+KN
+pDXt9rD5yeK+d6fv6cOdkqn2duOaxyRD35LVsT1UpnLHlnyuatskd1coWbjChugpWX2JqoXdW510
+kX3QFNZb412vXT8eoja53bmHIPm00+b7rmp9X0rvQ/i3xKcQurm3tV9XfZxRuMYUMMAaaCYnmWRf
+Q7W1bjbW95eZL0XsxIBwQZgioGKPZeO8ixFvDsldLD51dT11xzqkXnfnW9fsdTgk89nNRxpKT61u
+7bn+kFGeyevYf9rYblwD1QRThqlcg8hkmkkeVQvnY3zljo2xaL5EwIkgPCWA9tVm61FukUZxCCQk
+9MJfbT2nXDQVRjw0NYvzfM3CfBaiqYWUAlgMWgssUqOwZjLFKqel4RoKCjaJNVvTVAdfuTqkXfZx
+1f0bfWwtqjwy3bi7q9gCeYcG75Px7kMP28psUdWicqc3m06k275KVW/Qwbkdam1zH0bz9OH0T/Cp
+MgoX+QTOCACRggg5ClAObyGU8ncR2l1SMsIEATkZD+kwaxSn0dsroP500oNapnmeCspxCVJioViO
+NWUllkqVRZFyVZT5GVBftHOZ1eFb/ZewdgOGjPE/tkzlm5apeheqjBLgikjZvdN4VIdZo1CVI1aq
+GpAqjNEcgGFdFgqL0lKcm5JiLSZFOWG0Qzc9Q+qLbv7SVv0BWbMYBfYHAAA=
+'
+
+test -z "$srcdir" && export srcdir=.
+
+. $srcdir/../test.sh
+
+test_conversion "minerdetector" "minerdetector" "$in" "$out"
+

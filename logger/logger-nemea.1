@@ -1,0 +1,73 @@
+.TH LOGGER "1" "March 2019" "2.10.2 logger" "User Commands"
+.SH NAME
+logger \- manual page for logger 2.10.2
+.SH SYNOPSIS
+.B logger
+[\fICOMMON\fR]... [\fIOPTIONS\fR]...
+.SH DESCRIPTION
+.TP
+Number of Input IFC: \fBvariable\fR
+..
+.TP
+Number of Output IFC: \fB0\fR
+..
+.TP
+This module logs all incoming UniRec records to standard output or into a specified file. Each record is written as one line containing values of its fields in human-readable format separated by chosen delimiters (CSV format). If you use more than one input interface you have to specify output format by parameter \"-o\".
+.HP
+\fB\-N\fR, \fB\-\-interface_count\fR
+Number of input interfaces. Default: 1 interface
+.TP
+\fB\-w\fR, \fB\-\-write\fR
+Write output to FILE instead of stdout (rewrite the file).
+.TP
+\fB\-n\fR, \fB\-\-ifc_num\fR
+Add the number of interface the record was received on as the first field (or second when -T is specified).
+.TP
+\fB\-T\fR, \fB\-\-time\fR
+Add the time when the record was received as the first field.
+.TP
+\fB\-a\fR, \fB\-\-append\fR
+Write output to FILE instead of stdout (append to the end).
+.TP
+\fB\-o\fR, \fB\-\-output_fields\fR
+Set of fields included in the output (UniRec data format example:\uint32 FOO
+.TP
+\fB\-c\fR, \fB\-\-cut\fR
+Quit after N records are received
+.TP
+\fB\-d\fR, \fB\-\-delimiter\fR
+Optionally modifies delimiter to inserted value X (implicitely '
+.TP
+\fB\-t\fR, \fB\-\-title\fR
+Write names of fields on the first line.
+.TP
+.SH COMMON OPTIONS:
+.TP
+\fB\-h\fR \fB[trap,1]\fR
+If no argument, print this message. If \fItrap\fR or 1 is given, print TRAP help.
+.TP
+\fB\-i\fR \fBIFC_SPEC\fR
+Specification of interface types and their parameters, see \fI\-h trap\fR (mandatory parameter).
+.TP
+\fB\-v\fR
+Be verbose.
+.TP
+\fB\-vv\fR
+Be more verbose.
+.TP
+\fB\-vvv\fR
+Be even more verbose.
+.SH ENVIRONMENT VARIABLES
+.TP
+\fBPAGER\fR
+Show the help output in the set \fBPAGER\fR.
+.TP
+\fBLIBTRAP_OUTPUT_FORMAT\fR
+If set to \fIjson\fR, information about module is printed in JSON format.
+.TP
+\fBTRAP_SOCKET_DIR\fR
+Redefines directory for UNIX sockets.
+.SH BUGS
+Please send problems, bugs, questions, desirable enhancements, patches etc. to:
+\fInemea@cesnet.cz\fR
+

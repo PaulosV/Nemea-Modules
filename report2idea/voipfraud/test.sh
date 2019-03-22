@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# input data:
+in='
+H4sIAPD8jFcAA52SzW7TQBCA1wlIqegFUbVXHxGKVuvfxL4Q194ES4lt2Ws3PSCrxQm1aEOVBFVC
+ggtH7hx4Fi68Aa+QJ+ARYPyTNkW2VTEj7+x6dvebnZkWyoQ7T6/PkmTJWwGLba9brgLfzFbr9GrG
+W5RRk9muEzN7Qot/2Swe2n7Auh/SxVoSeRpRB26wtuvItb146BuhFdtOZDMam27osAq359OhPY3p
+1JjYjpGD6rYGoWnSIBiG49g0xuOdfYJaceWYOiP2Kvf3ywDZqUe7q/UyXbzdPZBf5J+CtarcQT5z
+JzUu5lY4woD6sTECKELtr+gTqhEO5A9INve8TZRZ/3gTcWCflF8me+j53aFD0APUlwUQQshAwyJW
+sKArRCXGaj1bpqt3vHc85QUBiwIW0HU9vnOL/35S4L+MNlGrCf8UdB+JYobvy2TQxxKWsbJLRt8e
+8uBfcUE0jE3UBvu6JB7+S3wGSpCUATX4Bsn7q7N0gd98PJldXvJMJPzFTQ8TUEXm5zcaliUMA0+I
+Lii6qmSjJumJiOZ1cXW4Vmsb18V5EddLiOsR2KMyrk5VXKjMBIx3caHPDe9vbznzpOD8gIw/bsr4
+EegBEtU84/B+KHivueINDbd3m//fyf2G26/jFw1XvFMrG05owj+o/D9n98v/oinNUP5enmb5P8sv
+67KKOPQXzBibh/kEAAA=
+'
+
+# output data:
+out='
+H4sIAOOaWVwAA+WXbYvbOBCAv9+vMP58Mhq9WdKn3ct2YaFXApvSckcpsl5SU8cOjtNtu/S/V1L2
+aA/Kbp2je6VxiMCa0Wg0fjwzvi0XZvLrYfxQ6uLv8nya/GY7VU+HdduXr34vymeD80l0W16/yCrP
+/MabMkreDe32dRjN3r12fvJ2aofDktWHbV5SXnbDTdK8nszU7qbWmi7dLoZ+8v10MG82Sbe0Hyvr
+d72fqj7Zr5LxbPuL6U9J/8m7uHLVHhYRDAJhigCvsNKMa87+ShuszLj2053XV8vVkL2RDOKFMT5T
+Fal4BZpjgbMXy3GYDkq7dlu+yjtd7230aBf23cJ03S5KcZy9HMaNSabLq4sn5zifbtiP9i5Gz3d+
+PF+nw+Vo7iY/tru3xfKPlwVARaCCb+0XZ66WLN9Hjeofrej65Ths8vydU3+a98vRh/b9U9+vpzdR
+pA4B7RfDPu8KkAIwtt4dFP81f5GD+Y3wAU7hoyKHbzH6yMRXWgphgjBfAdPANcNZ6+oiSetghWiw
+QQ1TDjHvCWqoAASO+JpJCsy7Mu+8s2O7zQ9S56MVF63p0LYzfbHex0C3/br89NvtL8JjDCiWGtN7
+eCQk8SgZPpMVrVjFHwvF70BQ/g8IggahGZmNoLBCOkoACVtHBI1QyEAAFMCagJngFteniGBKiaAJ
+3IMgTQSq+D9zw8a0fWU/zoCQkLkUvvBdV6wILt7c1BWOP86KcKMqRqs4FBinhyt4GhXVjvzoZKno
+kaRy0IzNJjU4LNKFsAsBMckUajx2qDG0AYml9MqeLqmgHkyWcTyKVDkX1AfAi+kxthDkePDIceAR
+jYlmcn6VFo33zDpknFWxShuKDA8CBQGO1q7mgZ9kikxVWmmM7wNP5CodU2TsGuufu22kj16ziU5l
+ez6Q1NfGY+6RkkEipqKuYrFmW6vAEojCRp0ikN/xGXPIhOruMwZ+Xh7Vf+ohybE8Uk35bB6ZkQbA
+YiQbzyOPokFK1QFJMKH2HgRVzany+FAPWefKzB6pMs9pIZlm4ke3kOxoUGuN54NKAm/iy6+QN7ZB
+zHEaGeUCMdI4xrkzwsAcUD8DWCo/yQASAAA=
+'
+
+test -z "$srcdir" && export srcdir=.
+
+. $srcdir/../test.sh
+
+test_conversion "voipfraud" "cz.cesnet.nemea.voipfrauddetection" "$in" "$out"
+
