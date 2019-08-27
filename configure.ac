@@ -267,6 +267,8 @@ AC_CONFIG_FILES([Makefile
                  report2idea/vportscan/Makefile
                  resolver/Makefile
                  scalar-aggregator/Makefile
+                 tls_traffic/Makefile
+                 tls_traffic/munin/Makefile
                  topn/Makefile
                  traffic_repeater/Makefile
                  unirec2json/Makefile

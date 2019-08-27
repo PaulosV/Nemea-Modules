@@ -21,6 +21,7 @@ proto_traffic \
 pdns_exporter \
 report2idea \
 resolver \
+tls_traffic \
 topn \
 traffic_repeater \
 unirec2json \
